@@ -40,25 +40,25 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
 **Answer**: Stack
 
-**Justification**:
+**Justification**: LIFO, Since the operation of the robot to retreat to the most recently visited intersection means it remove the last input, which is O(1) time complexcity in stack.
 
 2. A server receives a massive influx of data packets from a streaming video application. To prevent the video from skipping or playing out of order on the user's end, the server must process and forward these packets in the exact sequence they were received.
 
 **Answer**: Queue
 
-**Justification**:
+**Justification**: FIFO, Since the server process and forward pakets in the exact sequence they were received, which is FIFO operation, Queue is the best suited data structures.
 
 3. An atmospheric monitoring system reads temperature data from 10,000 sequentially numbered sensors (IDs 0 through 9999). Throughout the day, the system needs to constantly update and read the current temperature of randomly selected sensors based on their ID number to build localized weather maps.
 
 **Answer**: Array
 
-**Justification**:
+**Justification**: Since the atmospheric monitoring system read data sequentially, array is best suited data structure. Updating and reading current temperature from array is O(1).
 
 4. You are building a lightweight syntax checker for a code editor. Its sole job is to scan a document and ensure that every opened parenthesis `(`, bracket `[`, and brace `{` is matched with its corresponding closing character in the correct nested order.
 
 **Answer**: Stack
 
-**Justification**:
+**Justification**: LIFO, since the operation you are lokking for is matching the opened parenthesis you find the recently, which is LIFO, stack is the best suited data structure. The operation to peek the top is O(1).
 
 ## Empirical Comparison of Algorithms
 
