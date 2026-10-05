@@ -1,10 +1,10 @@
 # Lab 4: Concept Review
 
-This lab reviews the foundational concepts of algorithms and data structures that we have covered in the first half of the course. 
+This lab reviews the foundational concepts of algorithms and data structures that we have covered in the first half of the course.
 
 **Instructions:** To complete this lab, you may work in groups, but you must write your solutions yourself. Choose two of the topics below that you need to review and complete the corresponding problems. Where relevant, you are given the answer and must provide the justification as your solution. Once you have completed the lab, push your changes to your forked repository.
 
-**Topics:** asymptotic analysis, data structures, empirical comparison of algorithms, pseudocode, greedy algorithms. 
+**Topics:** asymptotic analysis, data structures, empirical comparison of algorithms, pseudocode, greedy algorithms.
 
 ## Asymptotic Analysis
 
@@ -33,7 +33,6 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 **Answer**: No
 
 **Justification**:
-
 
 ## Data Structures
 
@@ -70,17 +69,18 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 - $n = 4000$: 7.61 seconds
 - $n = 8000$: 60.85 seconds
 
- Based on this empirical data, what is the most likely asymptotic time complexity of the algorithm? **Hint**: Calculate the doubling ratio between each pair of consecutive runs.
+Based on this empirical data, what is the most likely asymptotic time complexity of the algorithm? **Hint**: Calculate the doubling ratio between each pair of consecutive runs.
 
- **Answer**: Cubic time complexity, $\mathcal{O}(n^3)$
+**Answer**: Cubic time complexity, $\mathcal{O}(n^3)$
 
-**Justification**:
+**Justification**: 0.94 / 0.12 = 7.83, 7.61 / 0.94 = 8.10, 60.85 / 7.61 = 8.00. You can see that doubling ratio between each pair of consecutive run is around 8. Since R = 8, time complexity is cubic: $\mathcal{O}(n^3)$
 
- 2. Two students write separate algorithms to compute a metric over an array of 10 million integers. Both algorithms perform exactly one mathematical operation per element, meaning both have a theoretical time complexity of $O(N)$. However, during benchmarking, Algorithm A consistently runs 15x faster than Algorithm B. Why might theoretical Big-O analysis fail to predict this massive performance gap? 
+2.  Two students write separate algorithms to compute a metric over an array of 10 million integers. Both algorithms perform exactly one mathematical operation per element, meaning both have a theoretical time complexity of $O(N)$. However, during benchmarking, Algorithm A consistently runs 15x faster than Algorithm B. Why might theoretical Big-O analysis fail to predict this massive performance gap?
 
 **Answer**:
+One algorithm is T(n) = 15n and the other is T(n) = n. However, in terms of big-O, you apply dropping constants, meaning both algorithm is O(n) time complexity, but 15x faster during benchmarking.
 
- 3. Scenario: To measure the running time of algorithms for an empirical comparison, a developer writes the following benchmarking script:
+3.  Scenario: To measure the running time of algorithms for an empirical comparison, a developer writes the following benchmarking script:
 
 ```python
 import time
@@ -96,6 +96,10 @@ print("Time:", end - start)
 They run this script exactly once for each algorithm on their laptop while streaming a movie in the background. Identify at least three distinct methodological flaws in this benchmarking setup that make the results unreliable.
 
 **Answer**:
+
+(1) Since they run their benchmarking while streaming a movie, it can intruppt their benchmarking experiment.
+(2) They run benchmarking just once. They should run their benchmarking multiple and take average to know real the result.
+(3) Input value of list should be random not fixed number, making your benchmarking realistic.
 
 ## Pseudocode
 
