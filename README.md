@@ -142,6 +142,6 @@ Consider the following three greedy strategies:
 
 Which of these three strategies guarantees an optimal solution (maximum number of films)? For the two strategies that fail, provide a counter-example (a small set of film times) where the greedy choice results in a sub-optimal schedule.
 
-**Answer**: The earliest finish strategy guarantees an optimal solution.
+**Answer**: The Earliest Finish strategy guarantees an optimal solution.
 
-**Justification**:
+**Justification**:　Choosing the film that finishes earliest leaves the maximum amount of remaining time for other films. This greedy choice can always be part of an optimal schedule, so repeatedly selecting the earliest-finishing compatible film produces the maximum number of non-overlapping films.
